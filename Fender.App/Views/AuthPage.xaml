@@ -1,0 +1,34 @@
+﻿<Page x:Class="Fender.App.Views.AuthPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Fender.App.Views"
+      mc:Ignorable="d"
+      Title="AuthPage"
+      d:DesignWidth="1280"
+      d:DesignHeight="720">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" /> 
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <Image Grid.Row="0" Grid.Column="1" Source="/Assets/Images/instant.png" Stretch="Fill"></Image>
+        <Label Grid.Row="1" Grid.Column="1" Content="Usuário:" />
+        <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource PrimaryTextBox}" />
+        <Label Grid.Row="3" Grid.Column="1" Content="Senha:" />
+        <PasswordBox Grid.Row="4" Grid.Column="1" Style="{StaticResource PrimaryPasswordBox}" />
+        <Button Grid.Row="5" Grid.Column="1" Content="Acessar" Style="{StaticResource PrimaryButton}"/>
+        
+    </Grid>
+</Page>

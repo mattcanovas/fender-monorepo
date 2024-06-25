@@ -10,4 +10,8 @@
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\Images\instant.png" />
+    <Resource Include="Assets\Images\instant.png" />
+  </ItemGroup>
 </Project>
