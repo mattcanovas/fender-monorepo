@@ -13,5 +13,7 @@
   <ItemGroup>
     <None Remove="Assets\Images\instant.png" />
     <Resource Include="Assets\Images\instant.png" />
+    <None Remove="Assets\Images\solo-logo.png" />
+    <Resource Include="Assets\Images\solo-logo.png" />
   </ItemGroup>
 </Project>

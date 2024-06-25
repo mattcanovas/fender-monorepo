@@ -8,6 +8,6 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        _mainFrame.Navigate(new AuthPage());
+        _mainFrame.Navigate(new HomePage());
     }
 }

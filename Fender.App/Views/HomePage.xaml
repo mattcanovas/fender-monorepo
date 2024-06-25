@@ -1,0 +1,70 @@
+﻿<Page x:Class="Fender.App.Views.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Fender.App.Views"
+      mc:Ignorable="d"
+      Title="HomePage"
+      d:DesignWidth="1280"
+      d:DesignHeight="720">
+    <Grid Margin="18">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            
+            <Image Grid.Row="0" Grid.Column="0" Source="/Assets/Images/solo-logo.png" Width="40" Stretch="Fill"/>
+        </Grid>
+        
+        <Menu Grid.Row="1" Grid.Column="0" Style="{StaticResource PrimaryMenu}">
+            <MenuItem Header="_Agenda">
+                <MenuItem Header="_Marcar" />
+                <MenuItem Header="_Consultar" />
+                <MenuItem Header="_Remarcar" />
+                <MenuItem Header="_Desmarcar" />
+            </MenuItem>
+            <MenuItem Header="_Pagamento" />
+            <MenuItem Header="_Comandas">
+                <MenuItem Header="_Gerar" />
+                <MenuItem Header="_Lançar" />
+                <MenuItem Header="_Conferir" />
+                <MenuItem Header="_Auditoria" />
+                <MenuItem Header="_Pendentes">
+                    <MenuItem Header="_Todos" />
+                    <MenuItem Header="_Individual" />
+                </MenuItem>
+                <MenuItem Header="_Receber debitos" />
+                <Separator Height="1" />
+                <MenuItem Header="_Caixinha" />
+                <MenuItem Header="_Debitar" />
+            </MenuItem>
+            <MenuItem Header="_Cadastros">
+                <MenuItem Header="_Clientes" />
+                <MenuItem Header="_Funcionarios" />
+                <MenuItem Header="_Usuarios" />
+                <MenuItem Header="_Produtos" />
+                <MenuItem Header="_Serviços" />
+            </MenuItem>
+            <MenuItem Header="_Relatorios" />
+        </Menu>
+        
+        <Frame Grid.Row="2" Grid.Column="0" x:Name="_homeFrame" Margin="0, 20, 0, 0"/>
+        
+        <StatusBar Grid.Row="3" Grid.Column="0" Style="{StaticResource PrimaryStatusBar}">Usuário: MATHEUS CANOVAS</StatusBar>
+    </Grid>
+</Page>
