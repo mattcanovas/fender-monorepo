@@ -29,6 +29,5 @@
         <Label Grid.Row="3" Grid.Column="1" Content="Senha:" />
         <PasswordBox Grid.Row="4" Grid.Column="1" Style="{StaticResource PrimaryPasswordBox}" />
         <Button Grid.Row="5" Grid.Column="1" Content="Acessar" Style="{StaticResource PrimaryButton}"/>
-        
     </Grid>
 </Page>
