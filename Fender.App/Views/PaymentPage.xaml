@@ -7,6 +7,14 @@
       mc:Ignorable="d"
       Title="PaymentPage" Height="450" Width="800">
     <Grid>
-        <Label Content="Payment page"></Label>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <Label Grid.Row="0" Grid.Column="0" Content="Pagamento" Style="{StaticResource PrimaryLabel}"></Label>
     </Grid>
 </Page>
