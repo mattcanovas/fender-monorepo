@@ -81,7 +81,6 @@ public class AuthViewModel : ViewModelBase
             ErrorMessage = "Usuário inexistente ou senha inválida, por favor, tente novamente.";
             return;
         }
-        var window = Window.GetWindow(App.Current.MainWindow) as MainWindow;
-        window._mainFrame.Navigate(new HomePage());
+        (Window.GetWindow(App.Current.MainWindow) as MainWindow).MainFrame.Navigate(new HomePage());
     }
 }

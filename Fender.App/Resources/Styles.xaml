@@ -55,4 +55,15 @@
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Cursor" Value="Hand" />
     </Style>
+    <Style x:Key="Title2xStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="TextAlignment" Value="Center" />
+    </Style>
+    <Style x:Key="DialogButtonConfirm" TargetType="Button">
+        <Setter Property="Background" Value="RoyalBlue" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="Cursor" Value="Hand" />
+    </Style>
 </ResourceDictionary>

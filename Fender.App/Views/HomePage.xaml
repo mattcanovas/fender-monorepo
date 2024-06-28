@@ -56,7 +56,7 @@
             <MenuItem Header="_Cadastros">
                 <MenuItem Header="_Clientes" />
                 <MenuItem Header="_Funcionarios" />
-                <MenuItem Header="_Usuarios" />
+                <MenuItem Header="_Usuarios" Click="MenuUsers_Click" />
                 <MenuItem Header="_Produtos" />
                 <MenuItem Header="_Serviços" />
             </MenuItem>
@@ -80,7 +80,7 @@
                 </Grid.RowDefinitions>
             </Grid>
             <TextBlock Grid.Row="0" Grid.Column="0" Text="Usuário: MATHEUS CANOVAS" />
-            <Button Grid.Row="0" Grid.Column="1" Content="Sair" Style="{StaticResource LogoutButton}" />
+            <Button Grid.Row="0" Grid.Column="1" Content="Sair" Style="{StaticResource LogoutButton}" Click="LogoutButton_Click" />
         </StatusBar>
     </Grid>
 </Page>

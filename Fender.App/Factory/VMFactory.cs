@@ -1,4 +1,5 @@
 ﻿using Fender.App.ViewModels;
+using Fender.App.ViewModels.Registers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,9 @@ public static class VMFactory
     public static AuthViewModel createAuthViewModel()
     {
         return new AuthViewModel();
+    }
+    public static UserRegistersViewModel createUserRegistersViewModel()
+    {
+        return new UserRegistersViewModel();
     }
 }
