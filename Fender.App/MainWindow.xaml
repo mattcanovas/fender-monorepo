@@ -35,9 +35,21 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Grid.Column="0" Text="Fender v0.0.1" HorizontalAlignment="Center" VerticalAlignment="Center" />
-            <Button Grid.Row="0" Grid.Column="1" Content="_" Style="{StaticResource HudWindowButton}" />
-            <Button Grid.Row="0" Grid.Column="2" Content="[ ]" Style="{StaticResource HudWindowButton}" />
+            <Grid Grid.Row="0" Grid.ColumnSpan="4" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Grid.Column="1" Source="/Assets/Images/solo-logo.png" Stretch="Fill" Width="24" />
+                <TextBlock Grid.Row="0" Grid.Column="2" Text="Fender v0.0.1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Button Grid.Row="0" Grid.Column="1" Content="_" Style="{StaticResource HudWindowButton}" Click="MinimizeButton_Click"/>
+            <Button Grid.Row="0" Grid.Column="2" Content="[ ]" Style="{StaticResource HudWindowButton}" Click="MaximizeButton_Click" />
             <Button Grid.Row="0" Grid.Column="3" Content="X" Style="{StaticResource HudWindowButton}" Click="CloseButton_Click" Cursor="Hand" />
         </Grid>
         <Frame

@@ -16,10 +16,10 @@
     <None Remove="Assets\Images\Icons\question_mark.png" />
     <None Remove="Assets\Images\Icons\question_red_mark.png" />
     <None Remove="Assets\Images\instant.png" />
+    <None Remove="Assets\Images\solo-logo.png" />
     <Resource Include="Assets\Images\Icons\question_mark.png" />
     <Resource Include="Assets\Images\Icons\question_red_mark.png" />
     <Resource Include="Assets\Images\instant.png" />
-    <None Remove="Assets\Images\solo-logo.png" />
     <Resource Include="Assets\Images\solo-logo.png" />
   </ItemGroup>
 </Project>

@@ -22,17 +22,20 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        
-        
-        <Label Grid.Row="0" Grid.Column="1" Content="Usuário:" />
-        <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource PrimaryTextBox}" Text="{Binding VM.Username, NotifyOnTargetUpdated=True, UpdateSourceTrigger=PropertyChanged}" />
-        <Label Grid.Row="2" Grid.Column="1" Content="Senha:" />
-        <PasswordBox Grid.Row="3" Grid.Column="1" Style="{StaticResource PrimaryPasswordBox}" PasswordChanged="_passwordBox_OnPasswordChanged" />
-        <TextBlock Grid.Row="4" Grid.Column="1" Style="{StaticResource ErrorMessageStyle}" Text="{Binding VM.ErrorMessage}" />
-        <Button Grid.Row="5" Grid.Column="1" 
+
+        <Image Grid.Row="0" Grid.Column="1" Width="140" Source="/Assets/Images/solo-logo.png" />
+        <Label Grid.Row="1" Grid.Column="1" Content="Usuário:" />
+        <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource PrimaryTextBox}" Text="{Binding VM.Username, NotifyOnTargetUpdated=True, UpdateSourceTrigger=PropertyChanged}" />
+        <Label Grid.Row="3" Grid.Column="1" Content="Senha:" />
+        <PasswordBox Grid.Row="4" Grid.Column="1" Style="{StaticResource PrimaryPasswordBox}" PasswordChanged="_passwordBox_OnPasswordChanged" />
+        <TextBlock Grid.Row="5" Grid.Column="1" Style="{StaticResource ErrorMessageStyle}" Text="{Binding VM.ErrorMessage}" />
+        <Button Grid.Row="6" Grid.Column="1" 
                 Content="Acessar" 
                 Style="{StaticResource PrimaryButton}"
-                Command="{Binding VM.SignInCommand}" />
+                Command="{Binding VM.SignInCommand}"
+                Background="Black"
+                Foreground="White"/>
     </Grid>
 </Page>
