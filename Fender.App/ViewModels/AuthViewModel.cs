@@ -2,15 +2,9 @@
 using Fender.App.Model;
 using Fender.App.Views;
 using Npgsql;
-using System;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using System.Security;
-using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-using System.Windows.Navigation;
 
 namespace Fender.App.ViewModels;
 
@@ -81,6 +75,6 @@ public class AuthViewModel : ViewModelBase
             ErrorMessage = "Usuário inexistente ou senha inválida, por favor, tente novamente.";
             return;
         }
-        (Window.GetWindow(App.Current.MainWindow) as MainWindow).MainFrame.Navigate(new HomePage());
+        (Window.GetWindow(App.Current.MainWindow) as MainWindow).MainFrame.Navigate(new HomePage($"Usuário: {user.FirstName} {user.LastName}"));
     }
 }
