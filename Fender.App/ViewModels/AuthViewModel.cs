@@ -1,12 +1,16 @@
 ﻿using Dapper;
 using Fender.App.Model;
+using Fender.App.Views;
 using Npgsql;
 using System;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Security;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Navigation;
 
 namespace Fender.App.ViewModels;
 
@@ -22,6 +26,7 @@ public class AuthViewModel : ViewModelBase
             OnPropertyChanged();
         }
     }
+
     private string _password { get; set; }
     public string Password
     {
@@ -29,6 +34,17 @@ public class AuthViewModel : ViewModelBase
         set
         {
             _password = value;
+            OnPropertyChanged();
+        }
+    }
+
+    private string _errorMessage { get; set; }
+    public string ErrorMessage
+    {
+        get => _errorMessage;
+        set
+        {
+            _errorMessage = value;
             OnPropertyChanged();
         }
     }
@@ -42,8 +58,12 @@ public class AuthViewModel : ViewModelBase
         }
     }
 
-    private static bool CanSignIn()
+    private bool CanSignIn()
     {
+        if (_username == null || _password == null)
+        {
+            return false;
+        }
         return true;
     }
 
@@ -56,6 +76,12 @@ public class AuthViewModel : ViewModelBase
                     AND Password = @Password;
                 """,
                 new { Username = _username, Password = _password });
-        MessageBox.Show($"Usuário detectado: {user.Username}, seja bem vindo {user.FirstName}");
+        if (user == null)
+        {
+            ErrorMessage = "Usuário inexistente ou senha inválida, por favor, tente novamente.";
+            return;
+        }
+        var window = Window.GetWindow(App.Current.MainWindow) as MainWindow;
+        window._mainFrame.Navigate(new HomePage());
     }
 }

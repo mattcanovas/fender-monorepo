@@ -24,7 +24,7 @@
             CornerRadius="8,8, 0,8"
         />
         <Frame
-            x:Name="_mainFrame"
+            x:Name="MainFrame"
             NavigationUIVisibility="Hidden"
             />
     </Grid>

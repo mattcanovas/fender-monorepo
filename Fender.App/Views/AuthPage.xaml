@@ -22,6 +22,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         
         <Image Grid.Row="0" Grid.Column="1" Source="/Assets/Images/instant.png" Stretch="Fill"></Image>
@@ -29,7 +30,8 @@
         <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource PrimaryTextBox}" Text="{Binding VM.Username, NotifyOnTargetUpdated=True, UpdateSourceTrigger=PropertyChanged}" />
         <Label Grid.Row="3" Grid.Column="1" Content="Senha:" />
         <PasswordBox Grid.Row="4" Grid.Column="1" Style="{StaticResource PrimaryPasswordBox}" PasswordChanged="_passwordBox_OnPasswordChanged" />
-        <Button Grid.Row="5" Grid.Column="1" 
+        <TextBlock Grid.Row="5" Grid.Column="1" Style="{StaticResource ErrorMessageStyle}" Text="{Binding VM.ErrorMessage}" />
+        <Button Grid.Row="6" Grid.Column="1" 
                 Content="Acessar" 
                 Style="{StaticResource PrimaryButton}"
                 Command="{Binding VM.SignInCommand}" />

@@ -42,4 +42,17 @@
         <Setter Property="VerticalAlignment" Value="Center"></Setter>
         <Setter Property="Cursor" Value="Hand"></Setter>
     </Style>
+    <Style x:Key="ErrorMessageStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="Red" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Margin" Value="0,14" />
+    </Style>
+    <Style x:Key="LogoutButton" TargetType="Button">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="IndianRed" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Cursor" Value="Hand" />
+    </Style>
 </ResourceDictionary>
