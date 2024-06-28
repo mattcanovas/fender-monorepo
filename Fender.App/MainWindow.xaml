@@ -50,7 +50,7 @@
             </Grid>
             <Button Grid.Row="0" Grid.Column="1" Content="_" Style="{StaticResource HudWindowButton}" Click="MinimizeButton_Click"/>
             <Button Grid.Row="0" Grid.Column="2" Content="[ ]" Style="{StaticResource HudWindowButton}" Click="MaximizeButton_Click" />
-            <Button Grid.Row="0" Grid.Column="3" Content="X" Style="{StaticResource HudWindowButton}" Click="CloseButton_Click" Cursor="Hand" />
+            <Button Grid.Row="0" Grid.Column="3" Content="X" Style="{StaticResource HudWindowButton}" Click="CloseButton_Click" />
         </Grid>
         <Frame
             Grid.Row="1" 

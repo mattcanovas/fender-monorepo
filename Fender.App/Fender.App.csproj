@@ -13,10 +13,12 @@
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Assets\Images\cas_logo.png" />
     <None Remove="Assets\Images\Icons\question_mark.png" />
     <None Remove="Assets\Images\Icons\question_red_mark.png" />
     <None Remove="Assets\Images\instant.png" />
     <None Remove="Assets\Images\solo-logo.png" />
+    <Resource Include="Assets\Images\cas_logo.png" />
     <Resource Include="Assets\Images\Icons\question_mark.png" />
     <Resource Include="Assets\Images\Icons\question_red_mark.png" />
     <Resource Include="Assets\Images\instant.png" />

@@ -23,6 +23,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <Image Grid.Row="0" Grid.Column="1" Width="140" Source="/Assets/Images/solo-logo.png" />
@@ -37,5 +38,16 @@
                 Command="{Binding VM.SignInCommand}"
                 Background="Black"
                 Foreground="White"/>
+        <Grid Grid.Row="7" Grid.Column="1" Margin="0, 50, 0, 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Desenvolvido por:" HorizontalAlignment="Center" />
+            <Image Grid.Row="1" Grid.Column="0" Source="/Assets/Images/cas_logo.png" Stretch="Fill" Width="80" />
+        </Grid>
     </Grid>
 </Page>

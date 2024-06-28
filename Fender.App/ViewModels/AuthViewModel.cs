@@ -72,7 +72,7 @@ public class AuthViewModel : ViewModelBase
                 new { Username = _username, Password = _password });
         if (user == null)
         {
-            ErrorMessage = "Usuário inexistente ou senha inválida, por favor, tente novamente.";
+            ErrorMessage = "Usuário ou senha inválidos, por favor tente novamente.";
             return;
         }
         (Window.GetWindow(App.Current.MainWindow) as MainWindow).MainFrame.Navigate(new HomePage($"Usuário: {user.FirstName} {user.LastName}"));
