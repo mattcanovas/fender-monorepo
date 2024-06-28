@@ -12,18 +12,37 @@
         MinHeight="600"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
-        Background="Transparent"
+        Background="White"
         AllowsTransparency="True"
         ResizeMode="CanResizeWithGrip">
-    
+
     <Grid>
-        <Border
-            Background="White"
-            BorderBrush="LightGray"
-            BorderThickness="5"
-            CornerRadius="8,8, 0,8"
-        />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Fender v0.0.1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <Button Grid.Row="0" Grid.Column="1" Content="_" Style="{StaticResource HudWindowButton}" />
+            <Button Grid.Row="0" Grid.Column="2" Content="[ ]" Style="{StaticResource HudWindowButton}" />
+            <Button Grid.Row="0" Grid.Column="3" Content="X" Style="{StaticResource HudWindowButton}" Click="CloseButton_Click" Cursor="Hand" />
+        </Grid>
         <Frame
+            Grid.Row="1" 
+            Grid.Column="0"
             x:Name="MainFrame"
             NavigationUIVisibility="Hidden"
             />
