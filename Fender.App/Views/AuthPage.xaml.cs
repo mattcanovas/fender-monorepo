@@ -18,10 +18,6 @@ public partial class AuthPage : Page
     private void _passwordBox_OnPasswordChanged(object sender, RoutedEventArgs e)
     {
         var passwordBox = (PasswordBox)sender;
-        VM.Password = new SecureString();
-        foreach (var character in passwordBox.Password)
-        {
-            VM.Password.AppendChar(character);
-        }
+        VM.Password = passwordBox.Password;
     }
 }

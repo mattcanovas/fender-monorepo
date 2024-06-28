@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Dapper;
+using Fender.App.Model;
+using Npgsql;
+using System;
 using System.Runtime.InteropServices;
 using System.Security;
 using System.Threading.Tasks;
@@ -19,8 +22,8 @@ public class AuthViewModel : ViewModelBase
             OnPropertyChanged();
         }
     }
-    private SecureString _password { get; set; }
-    public SecureString Password
+    private string _password { get; set; }
+    public string Password
     {
         get => _password;
         set
@@ -38,12 +41,21 @@ public class AuthViewModel : ViewModelBase
             return _signInCommand ??= new Handler.RelayCommandAsync(() => SignIn(), (o) => CanSignIn());
         }
     }
+
     private static bool CanSignIn()
     {
         return true;
     }
+
     private async Task SignIn()
     {
-        MessageBox.Show($"{_username}, {_password}");
+        using var connection = new NpgsqlConnection("Host=localhost; Database=fender_db; Username=postgres; Password=0709");
+        User user = await connection.QuerySingleOrDefaultAsync<User>("""
+                    SELECT * FROM Users
+                    WHERE Username = @Username
+                    AND Password = @Password;
+                """,
+                new { Username = _username, Password = _password });
+        MessageBox.Show($"Usuário detectado: {user.Username}, seja bem vindo {user.FirstName}");
     }
 }
