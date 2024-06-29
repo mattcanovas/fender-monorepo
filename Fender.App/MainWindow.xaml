@@ -46,7 +46,7 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Image Grid.Row="0" Grid.Column="1" Source="/Assets/Images/solo-logo.png" Stretch="Fill" Width="24" />
-                <TextBlock Grid.Row="0" Grid.Column="2" Text="Fender v0.0.1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock Grid.Row="0" Grid.Column="2" Text="Fender v1.0" HorizontalAlignment="Center" VerticalAlignment="Center" />
             </Grid>
             <Button Grid.Row="0" Grid.Column="1" Content="_" Style="{StaticResource HudWindowButton}" Click="MinimizeButton_Click"/>
             <Button Grid.Row="0" Grid.Column="2" Content="[ ]" Style="{StaticResource HudWindowButton}" Click="MaximizeButton_Click" />

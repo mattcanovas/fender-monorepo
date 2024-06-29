@@ -14,10 +14,10 @@
         AllowsTransparency="True"
         ResizeMode="CanResizeWithGrip">
     <Border 
-        Background="White"
-        BorderBrush="LightGray"
-        BorderThickness="2"
-        >
+Background="White"
+BorderBrush="LightGray"
+BorderThickness="2"
+>
         <Grid Margin="20" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -27,7 +27,7 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Image Grid.Row="0" Grid.Column="0" Width="150" Height="150" Source="/Assets/Images/Icons/question_mark.png" Stretch="Fill" />
+            <Image Grid.Row="0" Grid.Column="0" Width="150" Height="150" Source="/Assets/Images/Icons/question_red_mark.png" Stretch="Fill" />
             <TextBlock Grid.Row="1" Grid.Column="0" Text="Deseja realmente sair?" Style="{StaticResource Title2xStyle}" Margin="0, 26"/>
             <Grid Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
@@ -38,7 +38,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Button Grid.Row="0" Grid.Column="0" Content="Sim" Style="{StaticResource BlueButtonStyle}" Click="SimButton_Click"/>
+                <Button Grid.Row="0" Grid.Column="0" Content="Sim" Style="{StaticResource CloseButtonConfirm}" Click="SimButton_Click"/>
                 <Separator Grid.Row="0" Grid.Column="1" Background="Transparent" Width="10" />
                 <Button Grid.Row="0" Grid.Column="2" Content="Não" FontSize="12" Cursor="Hand" Background="Transparent" Click="NaoButton_Click"/>
             </Grid>
