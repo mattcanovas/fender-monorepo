@@ -44,9 +44,7 @@ public class UserRegistersViewModel : ViewModelBase
     private IEnumerable<User> _usersTask()
     {
         using NpgsqlConnection connection = new("Host=localhost; Database=fender_db; Username=postgres; Password=0709");
-        return connection.Query<User>("""
-            select * from Users;
-            """);
+        return connection.Query<User>("SELECT * FROM USERS;");
     }
 
     

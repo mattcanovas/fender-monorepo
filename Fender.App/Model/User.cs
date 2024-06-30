@@ -4,7 +4,7 @@ namespace Fender.App.Model;
 
 public class User
 {
-    [DisplayName("Identificado de registro")]
+    [DisplayName("Identificador de registro")]
     public int Id { get; set; }
     [DisplayName("Nome")]
     public string? FirstName { get; set; }

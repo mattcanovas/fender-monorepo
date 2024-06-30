@@ -78,4 +78,25 @@
         <Setter Property="FontWeight" Value="Bold" />
         <Setter Property="Cursor" Value="Hand" />
     </Style>
+    <Style TargetType="DataGrid">
+        <Setter Property="Background" Value="White" />
+        <Setter Property="BorderBrush" Value="LightGray" />
+    </Style>
+    <Style TargetType="DataGridCell">
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Background" Value="LightGray"></Setter>
+                <Setter Property="Foreground" Value="Black" />
+                <Setter Property="BorderBrush" Value="LightGray" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style TargetType="DataGridColumnHeader">
+        <Setter Property="Background" Value="#15c06d" />
+        <Setter Property="Padding" Value="6" />
+        <Setter Property="BorderBrush" Value="SeaGreen"></Setter>
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
 </ResourceDictionary>

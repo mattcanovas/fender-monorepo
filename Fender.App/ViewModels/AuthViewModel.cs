@@ -54,11 +54,7 @@ public class AuthViewModel : ViewModelBase
 
     private bool CanSignIn()
     {
-        if (_username == null || _password == null)
-        {
-            return false;
-        }
-        return true;
+        return _username != null && _password != null;
     }
 
     private async Task SignIn()

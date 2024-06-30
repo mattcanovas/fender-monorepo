@@ -24,6 +24,7 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -33,6 +34,7 @@
             <Button Grid.Row="0" Grid.Column="1" Content="Novo" Style="{StaticResource SecondaryButton}"></Button>
             <Button Grid.Row="0" Grid.Column="2" Content="Editar" Style="{StaticResource SecondaryButton}"></Button>
             <Button Grid.Row="0" Grid.Column="3" Content="Excluir" Style="{StaticResource SecondaryButton}"></Button>
+            <Button Grid.Row="0" Grid.Column="4" Content="Exportar" Style="{StaticResource SecondaryButton}" />
         </Grid>
         
         <DataGrid 
@@ -43,6 +45,7 @@
             ItemsSource="{Binding VM.Users}" 
             SelectedItem="{Binding VM.SelectedUser}"
             AutoGenerateColumns="True"
-            AutoGeneratingColumn="OnAutoGeneratingColumn"/>
+            AutoGeneratingColumn="OnAutoGeneratingColumn"
+            />
     </Grid>
 </Page>
