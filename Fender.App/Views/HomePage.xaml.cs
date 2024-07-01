@@ -9,12 +9,11 @@ namespace Fender.App.Views;
 
 public partial class HomePage : Page
 {
-    public HomeViewModel VM { get; private set; }
+    public HomeViewModel Vm { get; private set; } = new();
 
     public HomePage(string userLogged)
     {
-        VM = new HomeViewModel();
-        VM.UserLogged = userLogged;
+        Vm.UserLogged = userLogged;
         InitializeComponent();
     }
 

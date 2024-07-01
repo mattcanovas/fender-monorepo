@@ -1,4 +1,7 @@
-﻿namespace Fender.App.ViewModels;
+﻿using System;
+using System.Windows.Threading;
+
+namespace Fender.App.ViewModels;
 
 public class HomeViewModel : ViewModelBase
 {
@@ -12,4 +15,21 @@ public class HomeViewModel : ViewModelBase
         }
     }
 
+    public DateTime DateTimeNow => DateTime.Now;
+    private DispatcherTimer Timer { get; set; }
+
+    public HomeViewModel()
+    {
+        Timer = new DispatcherTimer
+        {
+            Interval = new TimeSpan(0, 0, 0, 1)
+        };
+        Timer.Tick += Timer_Tick;
+        Timer.Start();
+    }
+
+    private void Timer_Tick(object sender, EventArgs e)
+    {
+        OnPropertyChanged(nameof(DateTimeNow));
+    }
 }
