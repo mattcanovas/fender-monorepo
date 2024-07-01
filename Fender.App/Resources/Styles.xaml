@@ -35,6 +35,9 @@
     <Style x:Key="PrimaryLabel" TargetType="Label">
         <Setter Property="FontSize" Value="20" />
     </Style>
+    <Style x:Key="SecondaryLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+    </Style>
     <Style x:Key="SecondaryButton" TargetType="Button">
         <Setter Property="Padding" Value="6" />
         <Setter Property="FontSize" Value="12" />
@@ -67,8 +70,11 @@
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="BorderThickness" Value="0" />
     </Style>
-    <Style x:Key="CloseButtonConfirm" TargetType="Button" BasedOn="{StaticResource BlueButtonStyle}">
+    <Style x:Key="RedButtonStyle" TargetType="Button" BasedOn="{StaticResource BlueButtonStyle}">
         <Setter Property="Background" Value="IndianRed" />
+    </Style>
+    <Style x:Key="GreenButtonStyle" TargetType="Button" BasedOn="{StaticResource BlueButtonStyle}">
+        <Setter Property="Background" Value="SeaGreen"></Setter>
     </Style>
     <Style x:Key="HudWindowButton" TargetType="Button">
         <Setter Property="Background" Value="Transparent" />
@@ -83,6 +89,7 @@
         <Setter Property="BorderBrush" Value="LightGray" />
     </Style>
     <Style TargetType="DataGridCell">
+        <Setter Property="FontSize" Value="14"></Setter>
         <Style.Triggers>
             <Trigger Property="IsSelected" Value="True">
                 <Setter Property="Background" Value="LightGray"></Setter>
@@ -98,5 +105,12 @@
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="Foreground" Value="White" />
         <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+    <Style x:Key="SimpleButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="SeaGreen" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Cursor" Value="Hand" />
     </Style>
 </ResourceDictionary>

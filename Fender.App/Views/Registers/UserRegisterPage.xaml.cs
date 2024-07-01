@@ -1,6 +1,7 @@
 ﻿using Fender.App.ViewModels.Registers;
 using System.ComponentModel;
 using System.Reflection;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Fender.App.Views.Registers;
@@ -59,5 +60,10 @@ public partial class UserRegisterPage : Page
         }
 
         return null;
+    }
+
+    private void NovoButton_OnClick(object sender, RoutedEventArgs e)
+    {
+        NavigationService!.Navigate(new NewUserRegisterPage());
     }
 }

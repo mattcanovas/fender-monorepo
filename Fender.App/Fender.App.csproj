@@ -23,5 +23,11 @@
     <Resource Include="Assets\Images\Icons\question_red_mark.png" />
     <Resource Include="Assets\Images\instant.png" />
     <Resource Include="Assets\Images\solo-logo.png" />
+    <None Remove="Assets\Images\generate.png" />
+    <Resource Include="Assets\Images\generate.png" />
+    <None Remove="Assets\Images\Icons\generate.png" />
+    <Resource Include="Assets\Images\Icons\generate.png" />
+    <None Remove="Assets\Images\Icons\eye.png" />
+    <Resource Include="Assets\Images\Icons\eye.png" />
   </ItemGroup>
 </Project>
