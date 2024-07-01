@@ -16,7 +16,7 @@
         AllowsTransparency="True"
         ResizeMode="CanResizeWithGrip">
 
-    <Grid>
+    <Grid Margin="5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
